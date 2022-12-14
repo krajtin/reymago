@@ -1,4 +1,4 @@
-import Game from "../components/Game";
+const Game = dynamic(() => import('../components/Game'), { ssr: false });
 export default function Javi() {
   return (
     <>
