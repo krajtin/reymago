@@ -3,7 +3,7 @@ const Game = dynamic(() => import('../components/Game'), { ssr: false });
 export default function Javi() {
   return (
     <>
-    <Game image={"magic.jpeg"} textEnd={"Regalo de Balzatar mediante transferencia !!!"}/>
+    <Game image={"magic.jpeg"} textEnd={"Regalo de Baltazar mediante transferencia !!!"}/>
     </>
   )
 }
