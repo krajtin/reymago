@@ -29,17 +29,17 @@ class Preload extends Phaser.Scene {
             progressBar.fillRect(810, 460, 300 * value, 30);
         });
         this.load.on('complete', () => {
-            /*progressBar.destroy();
+            progressBar.destroy();
             progressBox.destroy();
             loadingText.destroy();
-            */
+            
 
         });
 
     }
 
     create() {
-        //this.scene.start('Start');
+        this.scene.start('Play', window.data);
     }
 
 }

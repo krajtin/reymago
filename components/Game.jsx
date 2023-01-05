@@ -2,14 +2,19 @@ import React, { useEffect } from "react";
 import Phaser from "phaser";
 //Scenes
 import Preload from "../scenes/Preload";
+import Play from "../scenes/Play";
+window.data = {};
+const Game = ({image, textEnd}) => {
 
-const Game = () => {
-
+    window.data = {
+        image,
+        textEnd
+    }
     // Configuración Tamaño Canvas
-    const DEFAULT_WIDTH = 751
-    const DEFAULT_HEIGHT = 1000
-    const MAX_WIDTH = 751;
-    const MAX_HEIGHT = 1000;
+    const DEFAULT_WIDTH = 800//320
+    const DEFAULT_HEIGHT = 600//480
+    const MAX_WIDTH = 320;
+    const MAX_HEIGHT = 480;
     // Configuración Base de Phaser3
     var config = {
         title: '',
@@ -35,6 +40,7 @@ const Game = () => {
         resolution: window.devicePixelRatio || 1,
         scene: [
             Preload,
+            Play
         ],
         transparent: false,
         fps: 60,
